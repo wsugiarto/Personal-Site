@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <title>Wilson's Personal Site</title>
+    
+</head>
+<body>
+    <header>
+        <noscript>This should still work without java script.</noscript>
+        <h1>Wilson Sugiarto</h1>
+        <nav>
+            <a href="/about.html">about</a>
+            <a href="/credentials.html">credentials</a>
+            <a href="/contact.html">contact</a>
+            <a href="/lab.html">lab</a>
+        </nav>
+        <label for="theme-selection-field">Theme:</label>
+        <select name="theme-selection" id="theme-selection-field">
+            <optgroup label="Modes">
+                <option value="Light">Light</option>
+                <option value="Dark">Dark</option>
+            </optgroup>
+            
+        </select>
+        
+        <hr>
+
+    </header>
+
+    <main>
+        <hello-world></hello-world>
+        <script>
+            class HelloWorld extends HTMLElement {
+            connectedCallback() {
+                console.log("Hello world!");
+            }
+            }
+            customElements.define('hello-world', HelloWorld);
+        </script>
+        
+        <h1>About Me</h1>
+        <blockquote>Some People want it to happen, some wish it would happen, others make it happen - Michael Jordan</blockquote>
+        
+        
+        <hgroup>
+            <h2>Personal Infomration</h2>
+            <p>Hi I am <b>Wilson</b>, a 20 year old college student from <i>Indonesia</i>. I currently study <em>Computer Science</em> as a rising senior at UCSD.</p>
+        </hgroup>
+        <picture>
+            <source media ="(min-width:1650px)" srcset="me.jpg">
+            <source media ="(min-width:450px)" srcset="me2.jpg">
+            <img src="me.jpg" alt="A picture of Wilson Sugiarto">
+        </picture>
+        <br>
+
+        <section>
+            <h2>Hobbies/Interests</h2>
+            <h3>Work-Related Hobbies</h3>
+             <div>
+                <ul>
+                    <li>Building Recommender Systems</li>
+                    <li>Modding video games</li>
+                </ul>
+            </div>
+            <h3>Recreational hobbies</h3>
+            <div>
+                <ol>
+                    <li>Competitive FPS Games</li>
+                    <li>Building Recommender Systems</li>
+                    <li>Building Gunpla</li>
+                </ol>
+            </div>
+        </section>
+
+        <article>
+            <h2>Current Project</h2>
+            <h3>Music Generation Model</h3>
+            <label for="functionality-bar">Functionality:</label>
+            <progress id="functionality-bar" value="100" max="100">100%</progress>
+            <p>Use machine learning to generate music. Using <span style="background-color: antiquewhite;">LSTM models and markov chain models</span>, we were able to generate new pieces and continuations. </p>
+            <aside>I particularly enjoy making extensions for <dfn>8 bit music</dfn>, which is a style of electronic music that uses the sound chips found 
+                in early computers and video game consoles, as they are easy to train on and produce for the models.</aside>
+            <details>
+                <summary>Here is a sample if you would like a listen:</summary> 
+                <audio controls>
+                    <source src="/symbolic_conditioned_jigs318_lstm.mp3">
+                </audio>
+
+            </details>
+        </article>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

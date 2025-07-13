@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <title>Wilson's Personal Site</title>
+</head>
+<body>
+    <header>
+        <h1>Wilson Sugiarto</h1>
+        <nav>
+            <a href="/about.html">about</a>
+            <a href="/credentials.html">credentials</a>
+            <a href="/contact.html">contact</a>
+            <a href="/lab.html">lab</a>
+        </nav>
+        <hr>
+
+    </header>
+    <main>
+        <h1>Lab</h1>
+        <h2>Dialog Box</h2>
+        <dialog open> This is an open dialog box. I might use this later for the submit <code>button</code> in contacts.</dialog>
+
+        <h2>Video</h2>
+        <video width="520" height="340" controls muted>
+            <source src="clip.mp4">
+            Video not available
+        </video>
+        <h2>Canvas Drawing a circle vs SVG drawing a circle</h2>
+        <canvas id="canvas">Browser doesn't support canvas</canvas>
+        <script>
+            let canvas = document.getElementById("canvas");
+            let ctx = canvas.getContext('2d');
+            ctx.beginPath();
+            ctx.arc(100, 100, 50, 0, Math.PI * 2);
+            ctx.stroke();
+        </script>
+        <p>This is an inline svg drawn star:
+        <svg width="300" height="200">
+            <polygon points="100,10 40,198 190,78 10,78 160,198"
+             />
+        </svg>
+        See its inline</p>
+
+        <h2>Sample Datalist tag usage</h2>
+        <label for="who-field">Which of the following fit who you are</label>
+        <input list="whoOptions" name="who" id="who-field">
+        <datalist id="whoOptions">
+            <option value="Recruiter">Recruiter</option>
+            <option value="Interviewer">Interviewer</option>
+            <option value="None">None of the Above</option>
+        </datalist>
+
+        <h2>Search Feature</h2>
+        <search>
+            <form action="/lab.html">
+                <label for="search-field"></label>
+                <input type="text" name="search" id="search-field" placeholder="Search here">
+            </form>
+        </search>
+
+        <h2>There is hidden template below here</h2>
+        <template>This is hidden information</template>
+    </main>   
+</body>
+</html>
