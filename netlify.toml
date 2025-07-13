@@ -1,0 +1,6 @@
+# netlify.toml
+[[redirects]]
+  from   = "/"
+  to     = "/about.html"
+  status = 200    # rewrite, not a visible redirect
+  force  = true   # take precedence over other rules
