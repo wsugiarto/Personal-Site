@@ -9,6 +9,12 @@
     <meta property="og:description" content="Wilson Sugiarto's personal site for recruiters and interviewers.">
     <link rel="icon" href="favicon.ico">
     <title>Wilson's Personal Site</title>
+    <style>
+        #span-example{
+            border-color: black; 
+            border-style: solid;
+        }
+    </style>
     
 </head>
 <body>
@@ -54,9 +60,9 @@
             <p>Hi I am <b>Wilson</b>, a 20 year old college student from <i>Indonesia</i>. I currently study <em>Computer Science</em> as a rising senior at UCSD.</p>
         </hgroup>
         <picture>
-            <source media ="(min-width:1650px)" srcset="me.jpg">
-            <source media ="(min-width:450px)" srcset="me2.jpg">
-            <img src="me.jpg" alt="A picture of Wilson Sugiarto">
+            <source media ="(min-width:1650px)" srcset="me.jpg" width="300" height="300">
+            <source media ="(min-width:450px)" srcset="me2.jpg" width="300" height="400">
+            <img src="me.jpg" alt="A picture of Wilson Sugiarto" width="300" height="300">
         </picture>
         <br>
 
@@ -84,7 +90,7 @@
             <h3>Music Generation Model</h3>
             <label for="functionality-bar">Functionality:</label>
             <progress id="functionality-bar" value="100" max="100">100%</progress>
-            <p>Use machine learning to generate music. Using <span style="background-color: antiquewhite;">LSTM models and markov chain models</span>, we were able to generate new pieces and continuations. </p>
+            <p>Use machine learning to generate music. Using <span id="span-example">LSTM models and markov chain models</span>, we were able to generate new pieces and continuations. </p>
             <aside>I particularly enjoy making extensions for <dfn>8 bit music</dfn>, which is a style of electronic music that uses the sound chips found 
                 in early computers and video game consoles, as they are easy to train on and produce for the models.</aside>
             <details>
