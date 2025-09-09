@@ -8,88 +8,83 @@
     <meta property="og:title"       content="Wilson's Personal Site">
     <meta property="og:description" content="Wilson Sugiarto's personal site for recruiters and interviewers.">
     <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
     <title>Wilson's Personal Site</title>
-    <style>
-        #span-example{
-            border-color: black; 
-            border-style: solid;
-        }
-    </style>
     
 </head>
 <body>
+    <div id="button-container">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">Toggle Theme</button>
+        <noscript>
+        JavaScript is off theme switcher unavailable.
+        </p>
+        </noscript>
+    </div>
     <header>
         <noscript>This should still work without java script.</noscript>
         <h1>Wilson Sugiarto</h1>
-        <nav>
-            <a href="/about.html">about</a>
-            <a href="/credentials.html">credentials</a>
-            <a href="/contact.html">contact</a>
-            <a href="/lab.html">lab</a>
+        <nav> 
+            <ul>
+                <li><a href="/about.html">about</a></li>
+                <li><a href="/credentials.html">credentials</a></li>
+                <li><a href="/contact.html">contact</a></li>
+                <li><a href="/lab.html">lab</a></li>
+            </ul>
         </nav>
-        <label for="theme-selection-field">Theme:</label>
-        <select name="theme-selection" id="theme-selection-field">
-            <optgroup label="Modes">
-                <option value="Light">Light</option>
-                <option value="Dark">Dark</option>
-            </optgroup>
-            
-        </select>
-        
-        <hr>
+        <details id="nav-menu">
+            <summary>Menu</summary>
+            <ul>
+                <li><a href="/about.html">about</a></li>
+                <li><a href="/credentials.html">credentials</a></li>
+                <li><a href="/contact.html">contact</a></li>
+                <li><a href="/lab.html">lab</a></li>
+            </ul>
+        </details>
 
+        
+        
     </header>
 
     <main>
-        <hello-world></hello-world>
-        <script>
-            class HelloWorld extends HTMLElement {
-            connectedCallback() {
-                console.log("Hello world!");
-            }
-            }
-            customElements.define('hello-world', HelloWorld);
-        </script>
-        
-        <h1>About Me</h1>
-        <blockquote>Some People want it to happen, some wish it would happen, others make it happen - Michael Jordan</blockquote>
-        
-        
-        <hgroup>
-            <h2>Personal Infomration</h2>
-            <p>Hi I am <b>Wilson</b>, a 20 year old college student from <i>Indonesia</i>. I currently study <em>Computer Science</em> as a rising senior at UCSD.</p>
-        </hgroup>
-        <picture>
-            <source media ="(min-width:1650px)" srcset="me.jpg" width="300" height="300">
-            <source media ="(min-width:450px)" srcset="me2.jpg" width="300" height="400">
-            <img src="me.jpg" alt="A picture of Wilson Sugiarto" width="300" height="300">
-        </picture>
-        <br>
-
         <section>
+            <h1>About Me</h1>
+        </section>
+        
+        <section id="about-section">
+            
+            <h2>Personal Infomration</h2>
+            <p>Hi I am <b>Wilson</b>, a 20 year old college student from <i>Indonesia</i>. I currently study <em>Computer Science</em> as a rising senior at UCSD.
+            I discovered my passion for creating software when I was introduced to tutorials on modding video games such as Minecraft, which also became my first
+            computer science based project. Today, I still enjoy creating modifications for other software, but I have also developed a strong interest in recommender 
+            systems and machine learning.</p>
+        </section>
+        <picture>
+                <source media ="(min-width:1650px)" srcset="me.jpg" width="250" height="250">
+                <!-- <source media ="(min-width:450px)" srcset="me2.jpg" width="300" height="300"> -->
+                <img src="me.jpg" alt="A picture of Wilson Sugiarto" width="250" height="250">
+        </picture>
+        
+
+        <section id="hobbies-section">
             <h2>Hobbies/Interests</h2>
             <h3>Work-Related Hobbies</h3>
-             <div>
                 <ul>
                     <li>Building Recommender Systems</li>
                     <li>Modding video games</li>
                 </ul>
-            </div>
+            
             <h3>Recreational hobbies</h3>
-            <div>
                 <ol>
                     <li>Competitive FPS Games</li>
                     <li>Building Recommender Systems</li>
                     <li>Building Gunpla</li>
                 </ol>
-            </div>
+            
         </section>
 
-        <article>
+        <section id="project-section">
             <h2>Current Project</h2>
             <h3>Music Generation Model</h3>
-            <label for="functionality-bar">Functionality:</label>
-            <progress id="functionality-bar" value="100" max="100">100%</progress>
             <p>Use machine learning to generate music. Using <span id="span-example">LSTM models and markov chain models</span>, we were able to generate new pieces and continuations. </p>
             <aside>I particularly enjoy making extensions for <dfn>8 bit music</dfn>, which is a style of electronic music that uses the sound chips found 
                 in early computers and video game consoles, as they are easy to train on and produce for the models.</aside>
@@ -100,11 +95,12 @@
                 </audio>
 
             </details>
-        </article>
+        </section>
     </main>
 
     <footer>
 
     </footer>
+    <script src="theme-switcher.js"></script>
 </body>
 </html>

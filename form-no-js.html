@@ -9,20 +9,11 @@
     <meta property="og:description" content="Wilson Sugiarto's personal site for recruiters and interviewers.">
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
-    
     <title>Wilson's Personal Site</title>
     
 </head>
 <body>
-    
-    <div id="button-container">
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">Toggle Theme</button>
-        <noscript>
-        JavaScript is off theme switcher unavailable.
-        </p>
-        </noscript>
-    </div>
-    
+
     <header>
         <h1>Wilson Sugiarto</h1>
         <nav> 
@@ -44,9 +35,7 @@
         </details>
 
     </header>
-    
     <main>
-        
         <section>
             <h1>Contact Information</h1>
         </section>
@@ -68,7 +57,7 @@
             
     </main>
     <footer>
-        <form id="contact-form" action="https://httpbin.org/post" method="post">
+        <form action="https://httpbin.org/post" method="post">
             <fieldset>
             <legend>Leave me a message</legend>
             <label for="fullname-field">Full Name(*):</label>
@@ -82,13 +71,10 @@
             <br>
             <label for="message-field">Message(*):</label>
             <textarea name = message id="message-field" rows="5" placeholder="Leave your Message Here" minlength="10" maxlength="500" required></textarea>
-            <p id="message-count" class="char-count">Characters left: 500</p>
+            
             <br>
 
             <input type="hidden" name="possible_bot" value=true>
-
-            <input type="hidden" name="form-errors" id="form-errors-field" value="">
-
             <span id="name-error" class="error">Error: Please enter your full name (Letters, spaces, hyphens or apostrophes only)</span>
             <span id="email-error" class="error">Error: Please enter a valid email</span>
             <span id="message-error" class="error">Error: Please a message of reasonable length</span>
@@ -146,7 +132,5 @@ Days</pre></th>
         </table>
 
     </footer>
-    <script src="script.js"></script>
-    <script src="theme-switcher.js"></script>
 </body>
 </html>

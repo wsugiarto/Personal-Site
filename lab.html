@@ -8,82 +8,117 @@
     <meta property="og:title"       content="Wilson's Personal Site">
     <meta property="og:description" content="Wilson Sugiarto's personal site for recruiters and interviewers.">
     <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
     <title>Wilson's Personal Site</title>
+    
 </head>
 <body>
+    <div id="button-container">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">Toggle Theme</button>
+        <noscript>
+        JavaScript is off theme switcher unavailable.
+        </p>
+        </noscript>
+    </div>
     <header>
         <h1>Wilson Sugiarto</h1>
-        <nav>
-            <a href="/about.html">about</a>
-            <a href="/credentials.html">credentials</a>
-            <a href="/contact.html">contact</a>
-            <a href="/lab.html">lab</a>
+        <nav> 
+            <ul>
+                <li><a href="/about.html">about</a></li>
+                <li><a href="/credentials.html">credentials</a></li>
+                <li><a href="/contact.html">contact</a></li>
+                <li><a href="/lab.html">lab</a></li>
+            </ul>
         </nav>
-        <hr>
+        <details id="nav-menu">
+            <summary>Menu</summary>
+            <ul>
+                <li><a href="/about.html">about</a></li>
+                <li><a href="/credentials.html">credentials</a></li>
+                <li><a href="/contact.html">contact</a></li>
+                <li><a href="/lab.html">lab</a></li>
+            </ul>
+        </details>
 
     </header>
     <main>
-        <h1>Lab</h1>
-        <h2>Dialog Box</h2>
-        <dialog open> This is an open dialog box. I might use this later for the submit <code>button</code> in contacts.</dialog>
+        <section>
+            <h1>Lab</h1>
+        </section>
+        <section>
+            <h2>Dialog Box</h2>
+            <dialog open style="position: inherit;"> This is an open dialog box. I might use this later for the submit <code>button</code> in contacts.</dialog>
 
-        <h2>Video</h2>
-        <video width="520" height="340" controls muted>
-            <source src="clip.mp4">
-            Video not available
-        </video>
-        <h2>Canvas Drawing a circle vs SVG drawing a circle</h2>
-        <canvas id="canvas">Browser doesn't support canvas</canvas>
-        <script>
-            let canvas = document.getElementById("canvas");
-            let ctx = canvas.getContext('2d');
-            ctx.beginPath();
-            ctx.arc(100, 100, 50, 0, Math.PI * 2);
-            ctx.stroke();
-        </script>
-        <p>This is an inline svg drawn star:
-        <svg width="300" height="200">
-            <polygon points="100,10 40,198 190,78 10,78 160,198"
-             />
-        </svg>
-        See its inline</p>
+        </section>
+        
+        <section>
+            <h2>Video</h2>
+            <video width="520" height="340" controls muted>
+                <source src="clip.mp4">
+                Video not available
+            </video>
+        </section>
+        
+        <section>
+            <h2>Canvas Drawing a circle vs SVG drawing a circle</h2>
+            <canvas id="canvas">Browser doesn't support canvas</canvas>
+            <script>
+                let canvas = document.getElementById("canvas");
+                let ctx = canvas.getContext('2d');
+                ctx.beginPath();
+                ctx.arc(100, 100, 50, 0, Math.PI * 2);
+                ctx.stroke();
+            </script>
+            <p>This is an inline svg drawn star:
+            <svg width="300" height="200">
+                <polygon points="100,10 40,198 190,78 10,78 160,198"
+                />
+            </svg>
+            See its inline</p>
+        </section>
+        
+        <section>
+            <h2>Sample Datalist tag usage</h2>
+            <label for="who-field">Which of the following fit who you are</label>
+            <input list="whoOptions" name="who" id="who-field">
+            <datalist id="whoOptions">
+                <option value="Recruiter">Recruiter</option>
+                <option value="Interviewer">Interviewer</option>
+                <option value="None">None of the Above</option>
+            </datalist>
 
-        <h2>Sample Datalist tag usage</h2>
-        <label for="who-field">Which of the following fit who you are</label>
-        <input list="whoOptions" name="who" id="who-field">
-        <datalist id="whoOptions">
-            <option value="Recruiter">Recruiter</option>
-            <option value="Interviewer">Interviewer</option>
-            <option value="None">None of the Above</option>
-        </datalist>
+            <h2>Search Feature</h2>
+            <search>
+                <form action="/lab.html">
+                    <label for="search-field"></label>
+                    <input type="text" name="search" id="search-field" placeholder="Search here">
+                </form>
+            </search>
 
-        <h2>Search Feature</h2>
-        <search>
-            <form action="/lab.html">
-                <label for="search-field"></label>
-                <input type="text" name="search" id="search-field" placeholder="Search here">
-            </form>
-        </search>
+            <h2>There is hidden template below here</h2>
+            <template>This is hidden information</template>
+        </section>
+        
+        <section>
+            <h2>Extra Credit</h2>
+            <p>Einstein's Equation</p>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi>E</mi>
+            <mo>=</mo>
+            <mi>m</mi>
+            <msup>
+            <mi>c</mi>
+            <mn>2</mn>
+            </msup>
+            </math>
 
-        <h2>There is hidden template below here</h2>
-        <template>This is hidden information</template>
-
-        <h2>Extra Credit</h2>
-        <p>Einstein's Equation</p>
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-        <mi>E</mi>
-        <mo>=</mo>
-        <mi>m</mi>
-        <msup>
-        <mi>c</mi>
-        <mn>2</mn>
-        </msup>
-        </math>
-
-        <p>Why couldn't developers us it:</p>
-        <p>It seems to be because chrome and edge, but mostly due to chrome not supporting MathML. Thus, since most people using chrome or its chromium counterparts won't be able to use it, 
-            developers needed to ensure accessibility for the most popular browser.</p>
+            <p>Why couldn't developers us it:</p>
+            <p>It seems to be because chrome and edge, but mostly due to chrome not supporting MathML. Thus, since most people using chrome or its chromium counterparts won't be able to use it, 
+                developers needed to ensure accessibility for the most popular browser.</p>
+        </section>
+        
 
     </main>   
+    <script src="theme-switcher.js"></script>
 </body>
 </html>
