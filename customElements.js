@@ -10,6 +10,17 @@ const resumeCredentialsData = {
       "Collaborated with professors and the team to analyze student feedback to improve future course iterations."
     ]
   },
+  "granblue-relink-mod": {
+    "title": "Granblue Fantasy: Relink Reloaded-II Mod",
+    "dates": "June 2026 – July 2026",
+    "metaLeft": "Project",
+    "metaRight": "San Diego, CA",
+    "bullets": [
+      "Developed a quality-of-life mod to automate and accelerate repeated quests, chest looting, and screen progression.",
+      "Reimplemented Cheat Engine scripts in C# using byte-pattern scanning, assembly-level patching, and code injection.",
+      "Reached #1 trending for one month after release, earning 3.2K+ downloads and 40+ endorsements on Nexus Mods."
+    ]
+  },
   "online-analytics": {
     "title": "Online Analytics Site",
     "dates": "January 2025 – Present",
