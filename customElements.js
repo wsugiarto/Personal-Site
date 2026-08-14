@@ -23,7 +23,7 @@ const resumeCredentialsData = {
   },
   "online-analytics": {
     "title": "Online Analytics Site",
-    "dates": "January 2025 – Present",
+    "dates": "January 2025 – April 2026",
     "metaLeft": "Project",
     "metaRight": "San Diego, CA",
     "bullets": [
